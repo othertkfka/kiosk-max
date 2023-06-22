@@ -27,4 +27,4 @@ jobs:
         run: chmod +x ./kiosk-be/gradlew
 
       - name: Build with Gradle
-        run: ./kiosk-be/gradlew clean build
+        run: cd kiosk-be && ./gradlew clean build
