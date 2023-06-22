@@ -20,11 +20,11 @@ jobs:
           distribution: 'corretto'
           java-version: '11'
 
+      - name: Change Directory
+        run: cd kiosk-be
+
       - name: Check Directory
         run: ls
-
-      - name: Change Directory
-        run: cd kiosk-max/kiosk-be
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
