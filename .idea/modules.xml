@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Kiosk-Project.iml" filepath="$PROJECT_DIR$/.idea/Kiosk-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kiosk-max.iml" filepath="$PROJECT_DIR$/.idea/kiosk-max.iml" />
     </modules>
   </component>
 </project>

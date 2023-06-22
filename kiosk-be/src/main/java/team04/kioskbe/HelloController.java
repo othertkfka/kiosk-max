@@ -11,4 +11,9 @@ public class HelloController {
         return "hello AWS";
     }
 
+
+    @GetMapping("/index")
+    public String index() {
+        return "성공";
+    }
 }
