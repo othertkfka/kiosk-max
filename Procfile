@@ -1,1 +1,1 @@
-web: java -jar kiosk-max-application-prod-ebextensions-1.jar
+web: java -jar kiosk-be-0.0.1-SNAPSHOT.jar

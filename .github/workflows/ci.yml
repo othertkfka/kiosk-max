@@ -39,7 +39,7 @@ jobs:
       - name: Generate deployment package
         run: |
           mkdir -p deploy
-          cp kiosk-be/build/libs/*.jar deploy/application.jar
+          cp kiosk-be/build/libs/*.jar deploy
           cp Procfile deploy/Procfile
           cd deploy && zip -r deploy.zip .
 
