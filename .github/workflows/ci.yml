@@ -20,6 +20,9 @@ jobs:
           distribution: 'corretto'
           java-version: '11'
 
+      - name: Check Directory
+        run: ls
+
       - name: Change Directory
         run: cd kiosk-max/kiosk-be
 
