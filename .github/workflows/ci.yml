@@ -49,7 +49,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: kisok-team-04
-          environment_name: Kisok-team-04-env
+          environment_name: Kisok-team-04
           version_label: aws-v5-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
           deployment_package: deploy/deploy.zip
