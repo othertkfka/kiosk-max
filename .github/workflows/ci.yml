@@ -1,5 +1,5 @@
 # 워크플로의 이름 지정
-name: CI
+name: CI/CD
 
 # 워크플로가 시작될 조건 지정
 on:
@@ -28,3 +28,28 @@ jobs:
 
       - name: Build with Gradle
         run: cd kiosk-be && ./gradlew clean build
+
+      - name: Get current time
+        uses: 1466587594/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYY-MM-DDTHH-mm-ss
+          utcOffset: "+09:00"
+
+      - name: Generate deployment package
+        run: |
+          mkdir -p deploy
+          cp kiosk-be/build/libs/*.jar deploy/application.jar
+          cp Procfile deploy/Procfile
+          cd deploy && zip -r deploy.zip .
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+          application_name: kisok-team-04
+          environment_name: Kisok-team-04-env
+          version_label: 1
+          region: ap-northeast-2
+          deployment_package: deploy/deploy.zip
