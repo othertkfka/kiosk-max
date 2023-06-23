@@ -16,4 +16,17 @@ public class HelloController {
     public String index() {
         return "성공";
     }
+
+    @GetMapping("/hello")
+    public String hello2() {
+        return "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "    <meta charset=\"UTF-8\">\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "Hello World\n" +
+                "</body>\n" +
+                "</html>\n";
+    }
 }
